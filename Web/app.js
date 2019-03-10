@@ -50,7 +50,12 @@ app.get("/author", function(req,res){
     res.render("author");
 })
 
-
 app.get("/details", function(req,res){
     res.render("details");
+})
+
+app.get("/locus", function(req,res){
+
+    
+    res.render("locus");
 })

@@ -1,0 +1,70 @@
+<% include partials/header %>
+
+<div class="mainDiv" align="left">
+        <h1>All Users</h1>
+        <table>
+            <thread>
+                <tr>
+                    <td>alertType</td>
+                    <td>intensity</td>
+                    <td>latitude</td>
+                    <td>longitude</td>
+                    <td>phoneNumber</td>
+                    
+                </tr>
+            </thread>
+            <tbody id="table_body">
+    
+            </tbody>
+        </table>
+    
+</div>
+    
+
+
+<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+	<script>
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyDVLKp7HtqDNiZlxz0U7iYvAhwkKZAz4hU",
+		authDomain: "tempest-aura.firebaseapp.com",
+		databaseURL: "https://tempest-aura.firebaseio.com",
+		projectId: "tempest-aura",
+		storageBucket: "tempest-aura.appspot.com",
+		messagingSenderId: "438059677456"
+	};
+	firebase.initializeApp(config);
+
+	var rootRef=firebase.database().ref().child("DisasterInformation");
+	rootRef.on("child_added",snap => {
+		var alertType = snap.child("alertType").val();
+		var intensity = snap.child("intensity").val();
+		var latitude = snap.child("latitude").val();
+		var longitude = snap.child("longitude").val();
+		var phoneNumber = snap.child("phoneNumber").val();
+        $("#table_body").append("<tr><td>" + alertType + "</td><td>" + intensity + "</td><td>" + latitude + "</td><td>" + longitude + "</td><td>" + phoneNumber + "</td></tr>");
+    });
+
+
+</script>
+
+<div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: latitude, lng: longitude},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+    async defer></script>
+
+
+
+
+
+
+<% include partials/footer %>
+
