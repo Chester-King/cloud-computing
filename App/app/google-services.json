@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "753634335550",
+    "firebase_url": "https://ians-125d8.firebaseio.com",
+    "project_id": "ians-125d8",
+    "storage_bucket": "ians-125d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:753634335550:android:39c75fa88d6c8fc6",
+        "android_client_info": {
+          "package_name": "com.example.amazonians"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "753634335550-1fg0pjriacqhtggfhmb0fe8ks23crec9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.amazonians",
+            "certificate_hash": "d7f8eec5cdf3561277a5dec0b9a9c29f669a9254"
+          }
+        },
+        {
+          "client_id": "753634335550-jjh5ljt6mdf3kkvtssvrg9kjjcdkejt2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmxKDtk6pPrc5S6biQ_q0bu49gr9KOUO8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "753634335550-jjh5ljt6mdf3kkvtssvrg9kjjcdkejt2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
