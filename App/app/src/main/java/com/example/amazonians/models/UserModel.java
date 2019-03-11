@@ -2,17 +2,19 @@ package com.example.amazonians.models;
 
 public class UserModel {
 
-    private String username;
-    private String email;
-    private double lat;
-    private double lng;
+    public String username;
+    public String email;
+    public String phNo;
+    public double lat;
+    public double lng;
 
     public UserModel() {
     }
 
-    public UserModel(String username, String email, double lat, double lng) {
+    public UserModel(String username, String email, String phNo, double lat, double lng) {
         this.username = username;
         this.email = email;
+        this.phNo = phNo;
         this.lat = lat;
         this.lng = lng;
     }

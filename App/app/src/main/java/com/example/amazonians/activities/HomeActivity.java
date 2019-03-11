@@ -80,8 +80,8 @@ public class HomeActivity extends AppCompatActivity {
         mDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                int userID = (int) (Math.random() * 100);
-                mDatabaseReference.child("location").child(String.valueOf(userID)).setValue(new UserModel(mLocation.getLatitude(), mLocation.getLongitude()));
+                int userID = (int) (Math.random() * 99999);
+                mDatabaseReference.child("users").child(String.valueOf(userID)).setValue(new UserModel("yash", "yash12@gmail.com", "9865301675", mLocation.getLatitude(), mLocation.getLongitude()));
                 startActivity(new Intent(HomeActivity.this, JourneyActivity.class));
             }
 
