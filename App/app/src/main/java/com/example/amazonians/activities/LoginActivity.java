@@ -20,10 +20,10 @@ public class LoginActivity extends AppCompatActivity {
         (findViewById(R.id.btn_login)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 EditText etUser = findViewById(R.id.ET_userLogin);
-                 String user = etUser.getText().toString();
-                 EditText etPass = findViewById(R.id.ET_passLogin);
-                 String pass = etPass.getText().toString();
+                EditText etUser = findViewById(R.id.ET_userLogin);
+                String user = etUser.getText().toString();
+                EditText etPass = findViewById(R.id.ET_passLogin);
+                String pass = etPass.getText().toString();
 
                 if (user.equals("admin") && pass.equals("qwert")) {
                     startActivity(new Intent(LoginActivity.this, HomeActivity.class));
