@@ -81,7 +81,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 int userID = (int) (Math.random() * 99999);
-                mDatabaseReference.child("users").child(String.valueOf(userID)).setValue(new UserModel("yash", "yash12@gmail.com", "9865301675", mLocation.getLatitude(), mLocation.getLongitude()));
+                mDatabaseReference.child("users").child(String.valueOf(userID)).setValue(new UserModel("karen", "karen64@gmail.com", "9462423962", mLocation.getLatitude(), mLocation.getLongitude()));
                 startActivity(new Intent(HomeActivity.this, JourneyActivity.class));
             }
 
