@@ -7,6 +7,25 @@ var passport=require("passport")
 var LocalStrategy= require("passport-local")
 var User=require("./models/user")
 
+function initMap() {
+    // The location of Uluru
+    var uluru = {
+        lat: -25.344,
+        lng: 131.036
+    };
+    // The map, centered at Uluru
+    var map = new google.maps.Map(
+        document.getElementById('map'), {
+            zoom: 4,
+            center: uluru
+        });
+    // The marker, positioned at Uluru
+    var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+    });
+}
+
 var indexRoutes=require("./routes/index");
 
 mongoose.connect("mongodb://chesterking:qwe123rty@ds141783.mlab.com:41783/chesterking");
@@ -50,4 +69,12 @@ app.get("/locus", function(req,res){
 
     
     res.render("locus");
-})
+});
+
+app.get("/maps", function(req,res){
+   
+    
+
+   
+    res.render("maps");
+});
